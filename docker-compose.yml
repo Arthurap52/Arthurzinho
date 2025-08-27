@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  arthurzinho:
+    build: .
+    container_name: arthurzinho
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - .:/app
