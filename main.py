@@ -39,7 +39,7 @@ async def invite_link(interact:discord.Interaction):
     await interact.followup.send("https://discord.gg/yBsJgcEc", ephemeral=True)
 
 @bot.tree.command()
-async def Mine_network(interact:discord.Interaction):
+async def mine_network(interact:discord.Interaction):
     await interact.response.defer()
     await interact.followup.send("Network Name: The_mine_of_shitbukais", ephemeral=True)
     await interact.followup.send("Network Password: mine_zin", ephemeral=True)
