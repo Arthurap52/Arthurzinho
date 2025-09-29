@@ -39,10 +39,11 @@ async def invite_link(interact:discord.Interaction):
     await interact.followup.send("https://discord.gg/yBsJgcEc", ephemeral=True)
 
 @bot.tree.command()
-async def mine_network(interact:discord.Interaction):
-    await interact.response.defer()
-    await interact.followup.send("Network Name: The_mine_of_shitbukais", ephemeral=True)
-    await interact.followup.send("Network Password: mine_zin", ephemeral=True)
+async def mine_network(interact: discord.Interaction):
+    embed = discord.Embed(title="Mine Network", description="Informações de acesso", color=0x00ff00)
+    embed.add_field(name="Network Name", value="`The_mine_of_shitbukais`", inline=False)
+    embed.add_field(name="Network Password", value="`mine_zin`", inline=False)
+    await interact.response.send_message(embed=embed)
 
 async def main():
     async with bot:
